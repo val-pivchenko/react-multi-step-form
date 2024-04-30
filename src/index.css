@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--magnolia);
+}
+
+.stepper-container {
+  gap: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 172px;
+  background-image: url("../public/assets/images/bg-sidebar-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.step {
+  cursor: pointer;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1.5px solid var(--light-blue);
+  color: var(--white);
+  margin-top: 3rem;
+  list-style-type: none;
+}
+
+.step.active {
+  color: black;
+  border: none;
+  background-color: var(--pastel-blue);
+}
+
+.heading {
+  color: var(--marine-blue);
+  margin-top: 2rem;
+}
+
+label {
+  color: var(--marine-blue);
+  font-size: 0.8rem;
+}
+
+.instructions {
+  color: var(--cool-gray);
+  width: 70%;
+  margin-top: 1rem;
+}
+
+.input-div {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* width: 90%; */
+}
+
+input {
+  margin-top: 0.3rem;
+  border: 1px solid var(--cool-gray);
+  border-radius: 5px;
+  padding: 0.5rem;
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--cool-gray);
+}
+
+.cards {
+  /* max-height: 100%; */
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+  top: 8rem;
+  background-color: var(--white);
+  border-radius: 15px;
+  width: 90%;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+.buttons-container {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--white);
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.next-btn {
+  background-color: var(--marine-blue);
+  color: var(--magnolia);
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.confirm-btn {
+  background-color: var(--purplish-blue);
+  color: var(--magnolia);
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.back-btn {
+  background-color: transparent;
+  color: var(--cool-gray);
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.btn-end-position {
+  justify-content: flex-end;
+}
